@@ -5,6 +5,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
+    email: {
+        type: String,
+        required: true,
+    },
     turno: {
         type: String,
         required: true,
