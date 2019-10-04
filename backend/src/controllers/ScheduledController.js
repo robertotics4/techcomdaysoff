@@ -4,12 +4,17 @@ const User = require('../models/User');
 module.exports = {
 
     async store(req, res) {
-        const scheduled = req.body;
-        const user = await User.findOne({ user });
+        let scheduled = req.body;
+        const user = await User.findById(req.body.user);
 
-        // Verificação da data
-        const dateExists = await Scheduled.findOne({ data: scheduled.data });
+        // Verificando se existe reserva
+        scheduled = await Scheduled.find({ data: scheduled.data }, (err, item) => {
+            if (!user.turno === item.user.turno) {
+                scheduled = await Scheduled.create(scheduled);
+            }
+        });
 
+        return res.json(scheduled);
     },
 
 };
