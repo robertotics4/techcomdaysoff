@@ -41,11 +41,14 @@ module.exports = {
             /* Criando a reserva no banco de dados */
             booking = await Booking.create(booking);
 
-            /* atualizando as folgas */
-            user.folgas = user.folgas - 1;
-
-            user = await User.update({ _id: user_id }, user).catch(err => {
-                return res.status(400).json({ error: err.message });
+            user = await User.findOne({ _id: user_id }, (err, doc) => {
+                if (doc) {
+                    /* Atualizando as folgas */
+                    doc.folgas = doc.folgas - 1;
+                    doc.save();
+                } else {
+                    return res.status(400).json({ error: err.message });
+                }
             });
 
             /* Populando o objeto user para uma melhor visualização */
