@@ -13,6 +13,8 @@ router.delete('/users/:id', UserController.destroy);
 
 // Configurando as rotas de 'Scheduled'
 router.get('/bookings', BookingController.index);
+router.get('/bookings/:id', BookingController.show);
 router.post('/bookings', BookingController.store);
+router.delete('/bookings/:id', BookingController.destroy);
 
 module.exports = router;
