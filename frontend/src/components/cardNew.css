@@ -1,0 +1,21 @@
+.card-container {
+  height: 210px;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: #a661ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-container span {
+  margin-top: 25px;
+  color: #fff;
+}
+
+.card-container:hover {
+  background-color: #9346f8;
+}
