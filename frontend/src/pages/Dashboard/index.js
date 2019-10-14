@@ -24,7 +24,11 @@ export default function Dashboard() {
         {bookings.map(booking => (
 
           <li key={booking._id}>
-            <CardBooking />
+            <CardBooking 
+              officeHour = {booking.officeHour}
+              date = {booking.date}
+              user = {booking.user}
+            />
           </li>
         ))}
       </ul>
