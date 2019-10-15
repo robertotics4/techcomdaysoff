@@ -11,6 +11,7 @@ function App() {
 
         <img src={logo} alt="Techcom" className="logo" />
         <div className="content">
+        <header className="label-content">Folgas marcadas:</header>
           <Routes />
         </div>
 

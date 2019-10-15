@@ -46,3 +46,18 @@ span.text {
 .btnExcluir:hover {
   background: #f72d2d;
 }
+
+.resolved {
+  background: #8a8a8abd;
+}
+
+.labelResolved {
+  padding: 0 20px;
+  font-size: 14px;
+  color: #b3ffc6;
+  text-align: center;
+}
+
+.currentBooking {
+  background: #a1d7fcbd;
+}

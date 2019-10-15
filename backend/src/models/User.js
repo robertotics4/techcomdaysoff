@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
     turno: {
         type: String,
         required: true,
-        enum: ['MATUTINO', 'VESPERTINO'],
+        enum: ['MATUTINO', 'VESPERTINO', 'SUPERVISOR'],
     },
     folgas: {
         type: Number,

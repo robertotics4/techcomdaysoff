@@ -63,4 +63,10 @@ module.exports = {
         return res.json(user);
     },
 
+    /* Método que exclui todos os usuários */
+    async clear(req, res) {
+        const users = await User.deleteMany({});
+
+        return res.json(users);
+    },
 };

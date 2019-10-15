@@ -12,7 +12,7 @@ const BookingSchema = new mongoose.Schema({
     },
     officeHour: {
         type: String,
-        enum: ['MATUTINO', 'VESPERTINO'],
+        enum: ['MATUTINO', 'VESPERTINO', 'SUPERVISOR'],
         required: true,
     }
 }, {

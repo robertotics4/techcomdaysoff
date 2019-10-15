@@ -5,7 +5,7 @@ module.exports = {
 
     /* Método que retorna todas as reservas cadastradas no banco de dados */
     async index(req, res) {
-        const bookings = await Booking.find().sort('-date').populate('user');
+        const bookings = await Booking.find().sort('date').populate('user');
 
         return res.json(bookings);
     },
@@ -85,5 +85,10 @@ module.exports = {
         return res.json(booking);
     },
 
+    /* Método que deleta todas as reservas */
+    async clear(req, res) {
+        const bookings = await Booking.deleteMany({});
 
+        return res.json(bookings);
+    },
 };
