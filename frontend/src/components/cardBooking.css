@@ -38,13 +38,13 @@ span.text {
   height: 40px;
   padding: 0 20px;
   font-size: 14px;
-  background: #ff4141;
+  background: #d16969;
   color: #fff;
   cursor: pointer;
 }
 
 .btnExcluir:hover {
-  background: #f72d2d;
+  background: #be4d4d;
 }
 
 .resolved {

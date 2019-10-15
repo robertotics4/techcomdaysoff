@@ -3,7 +3,7 @@
   width: 100%;
   flex-direction: column;
   border-radius: 4px;
-  background-color: #a661ff;
+  background-color: #5b6abe;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,5 +17,5 @@
 }
 
 .card-container:hover {
-  background-color: #9346f8;
+  background-color: #4a59af;
 }

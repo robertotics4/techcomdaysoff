@@ -20,7 +20,7 @@ export default function Dashboard() {
   return (
     <>
       <ul className="booking-list">
-        <CardNew />
+        
         {bookings.map(booking => (
 
           <li key={booking._id}>
@@ -31,6 +31,7 @@ export default function Dashboard() {
             />
           </li>
         ))}
+        <CardNew />
       </ul>
     </>
   );
